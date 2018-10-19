@@ -25,8 +25,10 @@ def draw():
     newx += x
     newy += y
     background(125,210,255)
+    fill(255,215,0)
+    ellipse(newx,newy,100,100)
     fill(255,255,255)
-    ellipse(newx,newy,100,50)
+    ellipse(500,70,100,50)
     fill(153,76,0)
     triangle(100,100,300,360,-50,360)
     fill(153,76,0)
@@ -35,8 +37,6 @@ def draw():
     triangle(500,100,700,360,300,360)
     fill(255,255,255)
     ellipse(320,50,100,50)
-    fill(255,215,0)
-    ellipse(100,70,100,100)
     fill(34,139,34)
     ellipse(320, 470, 1500, 250)
     
@@ -48,4 +48,3 @@ def draw():
     ellipse(330,380,10,10)
     fill(255,0,0)
     triangle(340, 200, 260, 300, 425, 300)
-
