@@ -1,15 +1,38 @@
+newx = 0
+newy = 0
 def setup():
     size(640,480)
+
 def draw():
+    global x
+    global y
+    global newx
+    global newy
+    x = 0
+    y = 0
+    if keyPressed and key == "w":
+        x = 0
+        y = -2
+    elif keyPressed and key == 's':
+        x = 0
+        y = 2
+    elif keyPressed and key == 'a':
+        x = -2
+        y = 0
+    elif keyPressed and key == 'd':
+        x = 2
+        y = 0
+    newx += x
+    newy += y
     background(125,210,255)
+    fill(255,255,255)
+    ellipse(newx,newy,100,50)
     fill(153,76,0)
     triangle(100,100,300,360,-50,360)
     fill(153,76,0)
     triangle(300,100,500,360,100,360)
     fill(153,76,0)
     triangle(500,100,700,360,300,360)
-    fill(255,255,255)
-    ellipse(500,70,100,50)
     fill(255,255,255)
     ellipse(320,50,100,50)
     fill(255,215,0)
@@ -24,5 +47,5 @@ def draw():
     fill(102,51,0)
     ellipse(330,380,10,10)
     fill(255,0,0)
-    triangle(340, 200, 260, 300, 425, 300);
-    
+    triangle(340, 200, 260, 300, 425, 300)
+
