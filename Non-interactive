@@ -1,0 +1,40 @@
+newx = 0
+newy = 0
+def setup():
+    size(640,480)
+
+def draw():
+    global x
+    global y
+    global newx
+    global newy
+    x = 10
+    y = 2
+    newx += x
+    newy += y
+    background(125,210,255)
+    fill(255,215,0)
+    ellipse(newx,newy,100,100)
+    fill(255,255,255)
+    ellipse(500,70,100,50)
+    fill(153,76,0)
+    triangle(100,100,300,360,-50,360)
+    fill(153,76,0)
+    triangle(300,100,500,360,100,360)
+    fill(153,76,0)
+    triangle(500,100,700,360,300,360)
+    fill(255,255,255)
+    ellipse(320,50,100,50)
+    fill(34,139,34)
+    ellipse(320, 470, 1500, 250)
+    
+    fill(255,255,255)
+    rect(280,280,125,125)
+    fill(204,102,0)
+    rect(318,345,50,60)
+    fill(102,51,0)
+    ellipse(330,380,10,10)
+    fill(255,0,0)
+    triangle(340, 200, 260, 300, 425, 300)
+
+
