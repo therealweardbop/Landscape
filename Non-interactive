@@ -8,33 +8,44 @@ def draw():
     global y
     global newx
     global newy
-    x = 10
-    y = 2
-    newx += x
-    newy += y
-    background(125,210,255)
-    fill(255,215,0)
-    ellipse(newx,newy,100,100)
-    fill(255,255,255)
-    ellipse(500,70,100,50)
-    fill(153,76,0)
-    triangle(100,100,300,360,-50,360)
-    fill(153,76,0)
-    triangle(300,100,500,360,100,360)
-    fill(153,76,0)
-    triangle(500,100,700,360,300,360)
-    fill(255,255,255)
-    ellipse(320,50,100,50)
-    fill(34,139,34)
-    ellipse(320, 470, 1500, 250)
+      
+      
+    if mouseButton == LEFT:
+        background(0,0,51)
+        fill(255, 255, 103)
+        ellipse(mouseX,mouseY,100,100)
+    else:
+        background(125,210,255)
+        fill(255,102,0)
+        ellipse(mouseX,mouseY,100,100)       
     
     fill(255,255,255)
-    rect(280,280,125,125)
-    fill(204,102,0)
-    rect(318,345,50,60)
-    fill(102,51,0)
-    ellipse(330,380,10,10)
-    fill(255,0,0)
-    triangle(340, 200, 260, 300, 425, 300)
+    ellipse(500,70,100,50)
+    fill(255,255,255)
+    ellipse(320,50,100,50)
+    
+    noStroke()
+    fill(0,0,102)
+    rect(0,250,1000,500)
+    fill(0,0,119)
+    rect(0,250,1000,150)
+    fill(0,0,136)
+    rect(0,250,1000,70)
+    fill(0,0,153)
+    rect(0,250,1000,25)
 
+    if mouseButton == LEFT:
+        fill(0,0,51)
+        rect(0,250,1000,500)
+        fill(0,0,64)
+        rect(0,250,1000,150)
+        fill(0,0,85)
+        rect(0,250,1000,70)
+        fill(0,0,102)
+        rect(0,250,1000,25)
 
+        
+        
+        
+        
+        
