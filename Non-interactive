@@ -1,68 +1,76 @@
-newx = 0
-newy = 0
+isDay=True
 def setup():
     size(640,480)
 
 def draw():
-    global x
-    global y
-    global newx
-    global newy
-      
-      
-    if mouseButton == LEFT:
-        background(0,0,51)
-        fill(255, 255, 103)
+    #colors
+    global isDay
+    orange = (255, 255, 103)
+    lightYellow = (255,102,0)
+    white = (255,255,255) 
+    darkBlue = (0,0,51) 
+    lightBlue = (125,210,255)
+    db1 = (0,0,51)
+    db2 = (0,0,64)
+    db3 = (0,0,85)
+    db4 = (0,0,102)
+    lb1 = (0,0,119)
+    lb2 = (0,0,136)
+    lb3 = (0,0,153)
+   
+    #background, water and sun 
+    if mousePressed and mouseButton == LEFT:
+        isDay = not isDay
+    if not isDay:
+        background(*darkBlue)
+        fill(*orange)
         ellipse(mouseX,mouseY,100,100)
+        fill(*db1)
+        rect(0,250,1000,500)
+        fill(*db2)
+        rect(0,250,1000,150)
+        fill(*db3)
+        rect(0,250,1000,70)
+        fill(*db4)
+        rect(0,250,1000,25)
     else:
-        background(125,210,255)
-        fill(255,102,0)
+        background(*lightBlue)
+        fill(*lightYellow)
         ellipse(mouseX,mouseY,100,100)       
+        noStroke()
+        fill(*db4)
+        rect(0,250,1000,500)
+        fill(*lb1)
+        rect(0,250,1000,150)
+        fill(*lb2)
+        rect(0,250,1000,70)
+        fill(*lb3)
+        rect(0,250,1000,25)
     
+    #clouds
     noStroke()
-    fill(255,255,255)
+    fill(*white)
     ellipse(100,90,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(60,90,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(80,70,100,50)
     
-    fill(255,255,255)
+    fill(*white)
     ellipse(540,110,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(500,110,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(520,90,100,50)
     
-    fill(255,255,255)
+    fill(*white)
     ellipse(320,50,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(280,50,100,50)
-    fill(255,255,255)
+    fill(*white)
     ellipse(300,30,100,50)
     
-    noStroke()
-    fill(0,0,102)
-    rect(0,250,1000,500)
-    fill(0,0,119)
-    rect(0,250,1000,150)
-    fill(0,0,136)
-    rect(0,250,1000,70)
-    fill(0,0,153)
-    rect(0,250,1000,25)
-
-    if mouseButton == LEFT:
-        fill(0,0,51)
-        rect(0,250,1000,500)
-        fill(0,0,64)
-        rect(0,250,1000,150)
-        fill(0,0,85)
-        rect(0,250,1000,70)
-        fill(0,0,102)
-        rect(0,250,1000,25)
-
     
-        
-        
+
         
         
