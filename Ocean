@@ -8,6 +8,7 @@ x3 = 2
 newx3 = 300
 boat = 2
 newboat = 100
+
 def setup():
     size(640,480)
 
