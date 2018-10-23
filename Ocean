@@ -1,5 +1,11 @@
 import time
 isDay=True
+x1 = 2
+newx1 = 80
+x2 = 2
+newx2 = 520
+x3 = 2
+newx3 = 300
 def setup():
     size(640,480)
 
@@ -20,6 +26,25 @@ def draw():
     lb2 = (0,0,136)
     lb3 = (0,0,153)
 
+    #movement
+    global x1
+    global newx1
+    if newx1 == 560 or newx1 == 60:
+        x1 *= -1
+    newx1 += x1
+    
+    global x2
+    global newx2
+    if newx2 == 560 or newx2 == 60:
+        x2 *= -1
+    newx2 += x2
+    
+    global x3
+    global newx3
+    if newx3 == 560 or newx3 == 60:
+        x3 *= -1
+    newx3 += x3
+    
     #background, water and sun 
     if mousePressed and mouseButton == LEFT:
         isDay = not isDay
@@ -38,29 +63,29 @@ def draw():
         rect(0,250,1000,70)
         fill(*db4)
         rect(0,250,1000,25)
-
+    
         #clouds
         noStroke()
         fill(*grey)
-        ellipse(100,90,100,50)
+        ellipse(newx1 + 20,90,100,50)
         fill(*grey)
-        ellipse(60,90,100,50)
+        ellipse(newx1 - 20,90,100,50)
         fill(*grey)
-        ellipse(80,70,100,50)
+        ellipse(newx1,70,100,50)
         
         fill(*grey)
-        ellipse(540,110,100,50)
+        ellipse(newx2 + 20,110,100,50)
         fill(*grey)
-        ellipse(500,110,100,50)
+        ellipse(newx2 - 20,110,100,50)
         fill(*grey)
-        ellipse(520,90,100,50)
+        ellipse(newx2,90,100,50)
         
         fill(*grey)
-        ellipse(320,50,100,50)
+        ellipse(newx3 + 20,50,100,50)
         fill(*grey)
-        ellipse(280,50,100,50)
+        ellipse(newx3 - 20,50,100,50)
         fill(*grey)
-        ellipse(300,30,100,50)
+        ellipse(newx3,30,100,50)
         
     else:
         background(*lightBlue)
@@ -81,24 +106,24 @@ def draw():
         #clouds
         noStroke()
         fill(*white)
-        ellipse(100,90,100,50)
+        ellipse(newx1 + 20,90,100,50)
         fill(*white)
-        ellipse(60,90,100,50)
+        ellipse(newx1 - 20,90,100,50)
         fill(*white)
-        ellipse(80,70,100,50)
+        ellipse(newx1,70,100,50)
         
         fill(*white)
-        ellipse(540,110,100,50)
+        ellipse(newx2 + 20,110,100,50)
         fill(*white)
-        ellipse(500,110,100,50)
+        ellipse(newx2 - 20,110,100,50)
         fill(*white)
-        ellipse(520,90,100,50)
+        ellipse(newx2,90,100,50)
         
         fill(*white)
-        ellipse(320,50,100,50)
+        ellipse(newx3 + 20,50,100,50)
         fill(*white)
-        ellipse(280,50,100,50)
+        ellipse(newx3 - 20,50,100,50)
         fill(*white)
-        ellipse(300,30,100,50)
+        ellipse(newx3,30,100,50)
         
         
