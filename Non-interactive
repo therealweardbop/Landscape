@@ -1,3 +1,4 @@
+import time
 isDay=True
 def setup():
     size(640,480)
@@ -21,6 +22,7 @@ def draw():
     #background, water and sun 
     if mousePressed and mouseButton == LEFT:
         isDay = not isDay
+        time.sleep(0.1)
     if not isDay:
         background(*darkBlue)
         fill(*orange)
@@ -71,6 +73,3 @@ def draw():
     ellipse(300,30,100,50)
     
     
-
-        
-        
