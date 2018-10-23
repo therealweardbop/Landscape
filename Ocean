@@ -6,6 +6,8 @@ x2 = 2
 newx2 = 520
 x3 = 2
 newx3 = 300
+boat = 2
+newboat = 100
 def setup():
     size(640,480)
 
@@ -45,6 +47,12 @@ def draw():
         x3 *= -1
     newx3 += x3
     
+    global boat
+    global newboat
+    if newboat == 540 or newboat == 20:
+        boat *= -1    
+    newboat += boat
+    
     #background, water and sun 
     if mousePressed and mouseButton == LEFT:
         isDay = not isDay
@@ -64,6 +72,10 @@ def draw():
         fill(*db4)
         rect(0,250,1000,25)
     
+        #boat
+        fill(153,76,0)
+        rect(newboat, 230, 90, 20)
+        
         #clouds
         noStroke()
         fill(*grey)
@@ -103,6 +115,10 @@ def draw():
         fill(*lb3)
         rect(0,250,1000,25)
         
+        #boat
+        fill(200,100,0)
+        rect(newboat, 230, 90, 20)
+        
         #clouds
         noStroke()
         fill(*white)
@@ -125,5 +141,3 @@ def draw():
         ellipse(newx3 - 20,50,100,50)
         fill(*white)
         ellipse(newx3,30,100,50)
-        
-        
