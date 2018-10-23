@@ -29,7 +29,7 @@ def draw():
     lb2 = (0,0,136)
     lb3 = (0,0,153)
 
-    #movement
+    #movement of clouds
     global x1
     global newx1
     if newx1 == 560 or newx1 == 60:
@@ -48,18 +48,20 @@ def draw():
         x3 *= -1
     newx3 += x3
     
+    #movement of boat
     global boat
     global newboat
     if newboat == 540 or newboat == 20:
         boat *= -1    
     newboat += boat
     
-    #background, water and sun 
+    #background, water, clouds and sun 
     if mousePressed and mouseButton == LEFT:
         isDay = not isDay
         time.sleep(0.1)
     if not isDay:
         background(*darkBlue)
+        #moon
         fill(*orange)
         ellipse(mouseX,mouseY,100,100)
         
@@ -102,6 +104,7 @@ def draw():
         
     else:
         background(*lightBlue)
+        #sun
         fill(*lightYellow)
         ellipse(mouseX,mouseY,100,100)       
     
